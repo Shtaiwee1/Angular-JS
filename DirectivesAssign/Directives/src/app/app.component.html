@@ -1,0 +1,9 @@
+<button class="btn btn-primary" (click)="displaySecret()">Display details</button>
+
+<p *ngIf="showSecret">secret password = tuna</p>
+<!-- you can also use the index of the current iteration in this case to display something other than a number like  a timestamp -->
+<!-- <div *ngFor="let item of log; let i = index" [ngStyle]="{backgroundColor : item >= 4 ? 'blue' : 'transparent'}" -->
+<!-- [ngClass]="{'white-text' : i >= 4}">{{item}}</div> -->
+
+<div *ngFor="let item of log" [ngStyle]="{backgroundColor : item >= 5 ? 'blue' : 'transparent'}"
+  [ngClass]="{'white-text' : item >= 5}">{{item}}</div>
