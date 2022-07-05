@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <label>username</label>
+      <input type="text" class="form-control" [(ngModel)]="username">
+      <p>{{username}}</p>
+      <!-- ngModel used for two way data binding the two-way data binding in Angular is used to display information to the end user and allows the end user to make changes to the underlying data using the UI in this case we can make changes to the username and display the username to the user -->
+      <button class="btn btn-primary" [disabled]=" username==='' " (click)="username=''">Reset User</button>
+      <!-- The button is disabled whenever the username is empty -->
+    </div>
+  </div>
+</div>
